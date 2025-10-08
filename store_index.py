@@ -18,7 +18,7 @@ text_chunks = text_split(filter_data)
 
 embeddings = download_hugging_face_embeddings()
 
-pinecone_api_key = "pcsk_6ieGdc_SGmU652RwnVW3zmZ6UzqZQks5C5c4N1iqUj1VadWCWRTde8sukPe2JaPrs8dvSH"
+pinecone_api_key = "PINECONE_API_KEY "
 pc = pinecone.Pinecone(api_key=pinecone_api_key)
 
 index_name = "medical-chatbot"
