@@ -2,12 +2,12 @@ flask
 gunicorn
 requests
 pinecone-client
-langchain
-langchain-groq
-langchain-huggingface
-langchain-community
 groq
 sentence-transformers==2.2.2
 python-dotenv
 pypdf
 setuptools<81
+langchain==0.2.24
+langchain-groq
+langchain-huggingface
+langchain-community
