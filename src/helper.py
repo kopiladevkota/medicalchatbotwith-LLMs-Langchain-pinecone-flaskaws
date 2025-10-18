@@ -4,7 +4,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 #from langchain_community.document_loaders import DirectoryLoader, PyPDFLoader
 from typing import List
 from langchain.schema import Document
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 def load_pdf_files(data):
     loader = DirectoryLoader(
         data,
