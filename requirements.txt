@@ -4,13 +4,10 @@ requests
 pinecone-client
 langchain
 langchain-groq
-langchain-embeddings
 langchain-huggingface
 langchain-community
 groq
-sentence-transformers==2.2.2  # smaller model
+sentence-transformers==2.2.2
 python-dotenv
 pypdf
 setuptools<81
-
-
