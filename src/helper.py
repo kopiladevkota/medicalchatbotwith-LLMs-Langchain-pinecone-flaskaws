@@ -5,6 +5,18 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from typing import List
 from langchain.schema import Document
 from langchain_community.embeddings import HuggingFaceEmbeddings
+
+
+embeddings = None
+
+def get_embeddings():
+    global embeddings
+    if embeddings is None:
+        embeddings = HuggingFaceEmbeddings(
+            model_name="sentence-transformers/paraphrase-MiniLM-L3-v2"  # smaller, ~20MB
+        )
+    return embeddings
+
 def load_pdf_files(data):
     loader = DirectoryLoader(
         data,
