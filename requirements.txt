@@ -1,3 +1,4 @@
+langchain-groq
 langchain == 0.3.26
 flask == 3.1.1
 gunicorn==20.1.0
