@@ -14,4 +14,9 @@ langchain-groq
 pinecone-client
 requests
 groq
+langchain
+langchain-llms
+langchain-embeddings
+langchain-huggingface
+langchain-community
 
