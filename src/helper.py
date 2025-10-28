@@ -1,25 +1,10 @@
 from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.document_loaders.pdf import PyPDFLoader
-from langchain.document_loaders.directory import DirectoryLoader
-
 
 #from langchain_community.document_loaders import DirectoryLoader, PyPDFLoader
 from typing import List
 from langchain.schema import Document
-from langchain_community.embeddings import HuggingFaceEmbeddings
-
-
-embeddings = None
-
-def get_embeddings():
-    global embeddings
-    if embeddings is None:
-        embeddings = HuggingFaceEmbeddings(
-            model_name="sentence-transformers/paraphrase-MiniLM-L3-v2"  # smaller, ~20MB
-        )
-    return embeddings
-
+from langchain.embeddings import HuggingFaceEmbeddings
 def load_pdf_files(data):
     loader = DirectoryLoader(
         data,
@@ -52,7 +37,7 @@ def text_split(minimal_docs):
  
 def download_hugging_face_embeddings():
   
-    model_name = "sentence-transformers/all-MiniLM-L3-v2"
+    model_name = "sentence-transformers/all-MiniLM-L6-v2"
     embeddings = HuggingFaceEmbeddings(
         model_name = model_name,
        # model_kwargs = {"device": "cuda" if torch.cuda.is_available()else "cpu"}
